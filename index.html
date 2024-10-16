@@ -15,20 +15,23 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <!-- Font awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header class="text-center border p-3 bg-primary text-white">
         <h1>Notes App</h1>
     </header>
-    
+
     <main class="border p-3 my-3">
         <div class="container-fluid notes-container ">
 
-            <button class="addNoteBtn" >
+            <button class="addNoteBtn" data-bs-toggle="modal" data-bs-target="#addNoteModal">
                 <i class="fa-solid fa-square-plus"></i>
             </button>
+
 
             <!-- <div class="note" >
                 <div class="note-content text-white" contenteditable="true" >
@@ -37,9 +40,31 @@
                 <button class="noteDeleteBtn btn  fw-bold">Delete</button>
             </div> -->
 
-            
-            
-            
+
+
+
+        </div>
+
+        <div class="modal fade " id="addNoteModal">
+            <div class="modal-dialog ">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h2 class="text-white">Add Note <i class="fa-solid fa-note-sticky"></i></h2>
+                        <button class="btn text-bg-info text-white" type="button" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form>
+                            <label for="note" class="form-label"></label>
+                            <textarea name="note" id="noteContent" class="inputBox" placeholder="Enter the Content"></textarea>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-dismiss="modal" id="addNote">Add Note</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer></footer>

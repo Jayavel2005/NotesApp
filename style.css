@@ -9,11 +9,13 @@ body {
     font-family: "Poppins", serif;
 
 }
-main{
+
+main {
     max-height: 80vh;
     overflow: scroll;
-    
+
 }
+
 /* note-container*/
 
 .notes-container {
@@ -50,6 +52,10 @@ main{
 .addNoteBtn .fa-square-plus {
     font-size: 70px;
     color: #ffffff;
+}
+
+.fa-note-sticky {
+    color: yellow;
 }
 
 .note {
@@ -91,4 +97,24 @@ main{
 .noteDeleteBtn:focus {
 
     border: none !important;
+}
+
+
+/* input box */
+.inputBox {
+    outline: none;
+    width: 100%;
+    padding: 20px 20px;
+    height: 200px;
+    border-radius: 20px;
+    background: #aa00ff !important;
+    box-shadow: inset 5px 5px 10px #8f00d6,
+        inset -5px -5px 10px #2727272a !important;
+    border: none;
+    color: #ffffff !important;
+    word-break: break-all;
+}
+::placeholder{
+    color: white;
+    font-weight: 700;
 }
